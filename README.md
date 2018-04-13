@@ -31,19 +31,22 @@ It has all the flexibility of a Spreadsheet + the formal structure of a Database
 There are a list of starter templates above.  You can either pick one of the example templates
 above, or start with an Empty template and build your own.  
 
-1. Copy  an Airtable Template above
+1. Copy an Airtable Template above
 
-   * Open one of the airtables above 
-   * Click *copy base* in the top right corner to create a copy in your own Airtable.com account.
+   * Open one of the airtables above and Click *copy base* in the top right corner to create a 
+copy in your own Airtable.com account.
 
 4. Customize the Airtable
 
-   * Just follow the patterns established.  
-   * Add as many sheets of data as you want, and simply list each sheet on the "Entities" tab.  That's the only "rule".
+   * Just follow the patterns established.  Add as many sheets of data as you want, and simply list 
+each sheet on the "Entities" tab.  That's the only "rule".
 
 4. Generate an API key on your account
 
-   * Open the API Database.
+   * If you have not already created an API Key - this is how to do it.
+   * Close the airtable to get to the Airtable.com home page.
+   * Click on your account icon in the top right corner of the screen and choose "Account"
+   * Scroll down and click "Generate Key" to create an API key
 
 5. Copy BaseID and APIKey
 
@@ -75,30 +78,30 @@ Base ID and API Key copied above.
 
 6. Run the `ssotme -init`
 
-    * Open a powershell prompt in the repo root folder, and type `>ssotme -init`.  
+   * Open a powershell prompt in the repo root folder, and type `>ssotme -init`.  
 The name of the project will be inferred from the name of the folder.
 
-    - *NOTE* - if the `Base ID` OR `API KEY` is wrong - it will be reported right away in the 
+   - *NOTE* - if the `Base ID` OR `API KEY` is wrong - it will be reported right away in the 
  init process as a 404 error on Airtable.
 
-    - Also - if the `AirtableName` values for any enties included do not match a tab in your Airtable, 
+   - Also - if the `AirtableName` values for any enties included do not match a tab in your Airtable, 
  the SSoT.me CLI will complain and tell you which entity does not match.
 
 8. Download Packages & Build Ionic Mobile App
 
-    * Move into the `/ionic-ts-sidemenu/` folder and type `>prepare-ionic.bat` to 
+   * Move into the `/ionic-ts-sidemenu/` folder and type `>prepare-ionic.bat` to 
 start the ionic project downloading npm packages and building the mobile app.
 
-10. Create Sql Server DB
+1. Create Sql Server DB
 
-        * Run the `/SqlServer/UpdateSchema.sql` to create (or update the schema for) a SQL Server Database.
+     * Run the `/SqlServer/UpdateSchema.sql` to create (or update the schema for) a SQL Server Database.
 
 7. Open Visual Studio
-   * Open the Visual Studio Solution (.sln) file that will be in the project root folder.
+     * Open the Visual Studio Solution (.sln) file that will be in the project root folder.
 
 9. Include additional project files
 
-    - In visual studio open `/Windows/CoreLibrary/SassyMQ/` and include the 3 `.cs` 
+     - In visual studio open `/Windows/CoreLibrary/SassyMQ/` and include the 3 `.cs` 
 files which are not automatically included.
 
     - In the visual studio project, open `/MVCRestAPI/Controllers/` and include the `api/*Controller.cs` 
@@ -106,12 +109,14 @@ rest api controllers which are not automatically included in the project when de
 
 ### Run the project
 
-1. Make the `MVCRestAPI` the startup project in the solution.
+11. Make the `MVCRestAPI` the startup project in the solution.
 
-2. Press F5 to run the project.  This will start the REST API.
+12. Press F5 to run the project.  This will start the REST API.
 
-3. in powershell, run `ionic-ts-sidemenu/>ionic serve` to start the Ionic Mobile app.  
+13. in powershell, run `ionic-ts-sidemenu/>ionic serve` to start the Ionic Mobile app.  
 
 ### Et Voila! 
 
 "Spreadsheet" to mobile app in less than 10 minutes.
+
+
