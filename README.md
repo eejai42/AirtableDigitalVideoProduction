@@ -31,7 +31,7 @@ It has all the flexibility of a Spreadsheet + the formal structure of a Database
 There are a list of starter templates above.  You can either pick one of the example templates
 above, or start with an Empty template and build your own.  
 
-1. Copy the an Airtable Template above
+1. Copy an Airtable Template above
 
    * Open one of the airtables above and Click *copy base* in the top right corner to create a 
 copy in your own Airtable.com account.
