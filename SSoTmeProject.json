@@ -58,7 +58,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "7c3354d1-118b-4fa6-8a1b-9d4756dd4dad",
+          "FileSetId": "c114b3a2-d011-42a7-9b38-4ed1fa323cd1",
           "FileSetFiles": []
         },
         "HasRemainingArguments": true,
@@ -154,7 +154,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "09b558a4-488f-4d8b-a74b-60cd43342e40",
+          "FileSetId": "aacb017f-6733-4185-a3ef-cb23be3078cf",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "/CustomTools/CreateDefaultFiles.xslt",
@@ -250,7 +250,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "5f3f7a1d-574e-4a62-9d30-3d97d727fd56",
+          "FileSetId": "41bd22af-bd5c-4a69-a302-4e7914856df5",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -349,7 +349,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "f2421bd7-dafd-40b0-8445-644c41c2c75b",
+          "FileSetId": "b1ef156f-78b1-4f06-9c7c-df0c790686b8",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "/SSoT/ProjectLexicon.xlsx",
@@ -408,6 +408,102 @@
     },
     {
       "MatchedTranspiler": {
+        "TranspilerId": "6aed1b2a-37ca-40dc-b344-5f35df178d84",
+        "Name": "CsvToSmql",
+        "DisplayName": "Csv To Smql",
+        "Description": "Converts a local CSV file into an SMQL file.",
+        "CreatedOn": "2017-09-15T22:12:36.46",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-0dlmenmzFCebAz5mrtILxw",
+        "LowerName": "csvtosmql",
+        "UpperName": "CSVTOSMQL",
+        "LowerHyphenName": "csv-to-smql",
+        "InputFileTypeId": "2b02094e-3b80-4a07-8db2-0c2f38d44328",
+        "OutputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "Category": "sassymq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "56b1ff1a-88a4-45de-92e7-026a8ffa4321",
+            "TranspilerId": "6aed1b2a-37ca-40dc-b344-5f35df178d84",
+            "Name": "v1",
+            "CreatedOn": "2017-09-15T22:12:42.74",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "csv-to-smql",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "sassymq/csv-to-smql -i .\\LexiconCSVs\\SassyMQLexicon.csv",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "77c6ff4c-22d8-4d77-998f-29fb0ef64aba",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "SassyMQLexicon.csv"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          ".\\LexiconCSVs\\SassyMQLexicon.csv"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "sassymq",
+        "parameters": [
+          "project-name=HomeworkPlus"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "817c7574-d643-44d5-8fa1-9f6a786631b7",
+      "Name": "CsvToSmql",
+      "RelativePath": "/SassyMQ",
+      "CommandLine": "sassymq/csv-to-smql -i .\\LexiconCSVs\\SassyMQLexicon.csv"
+    },
+    {
+      "MatchedTranspiler": {
         "TranspilerId": "ccea0ffb-6635-4929-bb72-a54ed716d27c",
         "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
         "Name": "OdxmlToSqlServerCreateDb",
@@ -447,7 +543,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "19db6f69-901c-40a3-b0d9-3251cef35714",
+          "FileSetId": "add56aa4-e3ad-4195-b0be-23df11fc7935",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -546,7 +642,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "4e00cc70-e512-4782-9820-083dcbba9375",
+          "FileSetId": "1f0d6af8-062c-424e-a379-b0a992b295a9",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -649,7 +745,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "55d08f2e-7353-4984-bcbd-195c61b3013a",
+          "FileSetId": "db5c3633-2253-4bf8-a0c5-7d9d13b69762",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -746,7 +842,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "51531a36-f1e3-4b43-aa03-11947c3f9bce",
+          "FileSetId": "4940f028-4512-4cce-8409-092af8c38383",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -843,7 +939,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "8a1d6d05-3152-4c44-ba90-b83ec812e824",
+          "FileSetId": "65dd2cf9-1361-4e10-a700-f96597b2ddd4",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -941,7 +1037,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "2bab7763-c195-4ce6-95ba-21959d438891",
+          "FileSetId": "626a3689-5609-4de2-8795-032e4bdc046a",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1043,7 +1139,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "49efa5ca-2ca2-4388-a18b-a950c2e6941c",
+          "FileSetId": "03de13a9-5a4f-4073-a0b4-467f730c052b",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1056,7 +1152,7 @@
         "SSoTmeProject": null,
         "ParseResult": 0,
         "OutputFileSet": {
-          "FileSetId": "bc407cce-dedb-4b04-8d33-4f3fa98dedba",
+          "FileSetId": "3ae3ff79-9f65-4137-9480-aa13c3a3ab1b",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "ionic2-ts-sidemenu1/src/providers/rest-api-service.ts",
@@ -1151,7 +1247,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "6fa42318-00a9-4ce0-b079-ecc1db6097ca",
+          "FileSetId": "2ee13308-7ab7-457e-88a3-627725857db7",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1249,7 +1345,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "1ba339d4-d518-494e-aa93-d0ed4a52f425",
+          "FileSetId": "5da346e4-5d0e-4f9c-a02c-64e3c97575f8",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1353,7 +1449,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "7bd06f35-2141-4acd-9f0c-84b7f48a7e14",
+          "FileSetId": "cb09f1b8-9fad-410a-a88e-70dfbdead89a",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1449,7 +1545,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "159e94ff-b967-4cf7-a47b-30638d8e2058",
+          "FileSetId": "9753efec-1e15-41eb-baef-228204b29f73",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1549,7 +1645,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "c2cc494a-b6cd-4b19-bdfc-a7ce5b94ae4f",
+          "FileSetId": "b736aeac-40ed-4e95-aa64-b35cb4fc7a49",
           "FileSetFiles": []
         },
         "HasRemainingArguments": false,
@@ -1601,102 +1697,6 @@
     },
     {
       "MatchedTranspiler": {
-        "TranspilerId": "6aed1b2a-37ca-40dc-b344-5f35df178d84",
-        "Name": "CsvToSmql",
-        "DisplayName": "Csv To Smql",
-        "Description": "Converts a local CSV file into an SMQL file.",
-        "CreatedOn": "2017-09-15T22:12:36.46",
-        "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-0dlmenmzFCebAz5mrtILxw",
-        "LowerName": "csvtosmql",
-        "UpperName": "CSVTOSMQL",
-        "LowerHyphenName": "csv-to-smql",
-        "InputFileTypeId": "2b02094e-3b80-4a07-8db2-0c2f38d44328",
-        "OutputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
-        "Category": "sassymq",
-        "IsRecommended": true,
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "56b1ff1a-88a4-45de-92e7-026a8ffa4321",
-            "TranspilerId": "6aed1b2a-37ca-40dc-b344-5f35df178d84",
-            "Name": "v1",
-            "CreatedOn": "2017-09-15T22:12:42.74",
-            "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
-            "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "csv-to-smql",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "sassymq/csv-to-smql -i .\\LexiconCSVs\\SassyMQLexicon.csv",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "3c2c8a9c-0bd5-46b0-968e-54aed5a67e6a",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "SassyMQLexicon.csv"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          ".\\LexiconCSVs\\SassyMQLexicon.csv"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "sassymq",
-        "parameters": [
-          "project-name=HomeworkPlus"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
-      "ProjectTranspilerId": "817c7574-d643-44d5-8fa1-9f6a786631b7",
-      "Name": "CsvToSmql",
-      "RelativePath": "/SassyMQ",
-      "CommandLine": "sassymq/csv-to-smql -i .\\LexiconCSVs\\SassyMQLexicon.csv"
-    },
-    {
-      "MatchedTranspiler": {
         "TranspilerId": "69a746d2-c0b1-4467-a020-9dd12b8bc098",
         "Name": "SmqlToDocs",
         "DisplayName": "Smql To Docs",
@@ -1736,7 +1736,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "bcc199f9-2337-41dd-a974-e23462e1cb5b",
+          "FileSetId": "921a9ed9-ef20-4369-a637-a53f9740c3c7",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1833,7 +1833,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "b6ee6472-4831-4eb9-9480-3a966cf38ff6",
+          "FileSetId": "d198bccb-829b-4354-847a-e68b020f010e",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1931,7 +1931,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "2b3b0661-2176-4159-b616-26180facee55",
+          "FileSetId": "388994c9-bc99-4f52-840c-bb08ea0c827b",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -2000,7 +2000,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "e8df0c47-50f1-4e4d-a4f5-db42f5903650",
+          "FileSetId": "9f9e4428-b187-4591-978c-2e3a8ae63127",
           "FileSetFiles": []
         },
         "HasRemainingArguments": false,
@@ -2093,7 +2093,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "165d9b16-f8cd-432a-af68-006a17f8576e",
+          "FileSetId": "db8dc595-5b7b-4ca9-ab63-dd0651594d81",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "/DSPXml/SSoTmeProject.spxml",
@@ -2190,7 +2190,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "83979789-9294-4821-a36c-2a04371b00db",
+          "FileSetId": "1169de27-de00-4908-b391-6e003b62a1dd",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
