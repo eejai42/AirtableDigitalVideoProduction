@@ -43,7 +43,10 @@ each sheet on the "Entities" tab.  That's the only "rule".
 
 4. Generate an API key on your account
 
-   * Open the API Database.
+   * If you have not already created an API Key - this is how to do it.
+   * Close the airtable to get to the Airtable.com home page.
+   * Click on your account icon in the top right corner of the screen and choose "Account"
+   * Scroll down and click "Generate Key" to create an API key
 
 5. Copy BaseID and APIKey
 
