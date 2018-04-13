@@ -49,8 +49,8 @@ each sheet on the "Entities" tab.  That's the only "rule".
 
    * Open the API Documentation and choose *show API key* in the top right corner.  Copy your 
 airtable base id and api key from the documentation.
- - https://api.airtable.com/v0/{THIS_IS_THE_BASE_ID}/Roadmap?api_key={THIS_IS_YOUR_API_KEY}
- - The `baseId` will start *app*XYZ123 and the `apiKey` will start out *key*XYZ123.
+   - https://api.airtable.com/v0/{THIS_IS_THE_BASE_ID}/Roadmap?api_key={THIS_IS_YOUR_API_KEY}
+   - The `baseId` will start *app*XYZ123 and the `apiKey` will start out *key*XYZ123.
 
 ### Fork and Clone this Repo
 
@@ -78,10 +78,10 @@ Base ID and API Key copied above.
    * Open a powershell prompt in the repo root folder, and type `>ssotme -init`.  
 The name of the project will be inferred from the name of the folder.
 
-        - *NOTE* - if the `Base ID` OR `API KEY` is wrong - it will be reported right away in the 
+   - *NOTE* - if the `Base ID` OR `API KEY` is wrong - it will be reported right away in the 
  init process as a 404 error on Airtable.
 
-        - Also - if the `AirtableName` values for any enties included do not match a tab in your Airtable, 
+   - Also - if the `AirtableName` values for any enties included do not match a tab in your Airtable, 
  the SSoT.me CLI will complain and tell you which entity does not match.
 
 8. Download Packages & Build Ionic Mobile App
@@ -89,16 +89,16 @@ The name of the project will be inferred from the name of the folder.
    * Move into the `/ionic-ts-sidemenu/` folder and type `>prepare-ionic.bat` to 
 start the ionic project downloading npm packages and building the mobile app.
 
-10. Create Sql Server DB
+1. Create Sql Server DB
 
-   * Run the `/SqlServer/UpdateSchema.sql` to create (or update the schema for) a SQL Server Database.
+     * Run the `/SqlServer/UpdateSchema.sql` to create (or update the schema for) a SQL Server Database.
 
 7. Open Visual Studio
-   * Open the Visual Studio Solution (.sln) file that will be in the project root folder.
+     * Open the Visual Studio Solution (.sln) file that will be in the project root folder.
 
 9. Include additional project files
 
-    - In visual studio open `/Windows/CoreLibrary/SassyMQ/` and include the 3 `.cs` 
+     - In visual studio open `/Windows/CoreLibrary/SassyMQ/` and include the 3 `.cs` 
 files which are not automatically included.
 
     - In the visual studio project, open `/MVCRestAPI/Controllers/` and include the `api/*Controller.cs` 
