@@ -1,9 +1,11 @@
 # ssotme-ms-airtable-ionic-sassymq-seed
 An Ionic Sassy Seed based on an Airtable.com base.
 
-#### Full Roadmap
-For a full project roadmap, including: [Roadmap Airtable Template](https://airtable.com/shriiZMSnMwtOUKY3)
+#### Full [Airtable.com](https://Airtable.com) Roadmap
+For a full project roadmap, use: 
+ - [Roadmap Airtable Template](https://airtable.com/shriiZMSnMwtOUKY3)
 
+Includes:
  - Roadmap - Project Phases/Budget
  - User Stories
  - Actors
@@ -12,9 +14,11 @@ For a full project roadmap, including: [Roadmap Airtable Template](https://airta
  - App States
  - Settings
 
-Or, for an empty starting project, use this: [Empty Airtable Template](https://airtable.com/shrGgWOuXXxhZls1c)
+Or, for an empty starting project, use: 
+ - [An Empty Airtable Template](https://airtable.com/shrGgWOuXXxhZls1c)
 
-#### Other Start Templates:
+#### Other [Airtable.com](https://Airtable.com) Starter Templates:
+- [IMDB like Template](https://airtable.com/shrBjd3rF6J9oB2Wx)
 - [Simple Company Template](https://airtable.com/shr12ryYJilZGEZuj)
 - [Piano Service Template](https://airtable.com/shrUU5nLreXumAQHK)
 - [Simple Task Manager](https://airtable.com/shrLrXduwAKlsI3bS)
@@ -23,9 +27,9 @@ Or, for an empty starting project, use this: [Empty Airtable Template](https://a
 
 # Using this Seed:
 
-### Create an Airtable Base
+### Create an [Airtable.com](https://Airtable.com) Base
 
-Airtable.com is *by far* the best tool I've ever found for describing a single source of truth. 
+Airtable.com is *by far* the best tool I've found (so far) for describing a Single Source of Truth. 
 It has all the flexibility of a Spreadsheet + the formal structure of a Database.
 
 There are a list of starter templates above.  You can either pick one of the example templates
