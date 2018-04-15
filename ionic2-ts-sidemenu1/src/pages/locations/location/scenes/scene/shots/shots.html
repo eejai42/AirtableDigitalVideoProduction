@@ -1,0 +1,50 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ this.parent.scene.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - Shots</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     Shots
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!shots || shots.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No Shots yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="shots && shots.length > 0">
+                        <button ion-item="" (click)="goToState(ShotState, shot)" *ngFor="let shot of shots">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ shot.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewShot()">
+                        <ion-icon name="add" item-left=""></ion-icon> New Shot
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>

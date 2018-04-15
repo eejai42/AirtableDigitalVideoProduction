@@ -24,104 +24,44 @@ export class RestAPIService {
       
       
       
-    public letterGrades: any[];
-    getLetterGrades() {
+    public staffDirectories: any[];
+    getStaffDirectories() {
 
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/LetterGrades?expand=all')
+            this.http.get(this.apiUrl + '/StaffDirectories?expand=all')
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.letterGrades = data;
-                    resolve(this.letterGrades);
+                    this.staffDirectories = data;
+                    resolve(this.staffDirectories);
                 });
         });
     }
 
-    public letterGrade: any[];
-    getLetterGrade(letterGrade: any) {
+    public staffDirectory: any[];
+    getStaffDirectory(staffDirectory: any) {
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/LetterGrades?expand=all&letterGradeId=' + letterGrade.LetterGradeId)
+            this.http.get(this.apiUrl + '/StaffDirectories?expand=all&staffDirectoryId=' + staffDirectory.StaffDirectoryId)
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.letterGrade = data;
-                    resolve(this.letterGrade);
+                    this.staffDirectory = data;
+                    resolve(this.staffDirectory);
                 });
         });
     }
 
     
-    updateLetterGrade(letterGrade: any) {
+    updateStaffDirectory(staffDirectory: any) {
          return new Promise(resolve => {
-            this.http.put(this.apiUrl + '/LetterGrades', letterGrade)
+            this.http.put(this.apiUrl + '/StaffDirectories', staffDirectory)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
                 });
         });
     }
-    addNewLetterGrade(letterGrade: any) {
+    addNewStaffDirectory(staffDirectory: any) {
          return new Promise(resolve => {
-            this.http.post(this.apiUrl + '/LetterGrades', letterGrade)
-                .map(res => res.json())
-                .subscribe(data => {
-                    resolve(data);
-                });
-        });
-    }
-
-    deleteLetterGrade(letterGrade: any) {
-         return new Promise(resolve => {
-            this.http.delete(this.apiUrl + '/LetterGrades?letterGradeId=' + letterGrade.LetterGradeId)
-                .map(res => res.json())
-                .subscribe(data => {
-                    resolve(data);
-                });
-        });
-    }
-    
-      
-      
-      
-      
-      
-    public assignments: any[];
-    getAssignments() {
-
-        return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Assignments?expand=all')
-                .map(res => res.json())
-                .subscribe(data => {
-                    this.assignments = data;
-                    resolve(this.assignments);
-                });
-        });
-    }
-
-    public assignment: any[];
-    getAssignment(assignment: any) {
-        return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Assignments?expand=all&assignmentId=' + assignment.AssignmentId)
-                .map(res => res.json())
-                .subscribe(data => {
-                    this.assignment = data;
-                    resolve(this.assignment);
-                });
-        });
-    }
-
-    
-    updateAssignment(assignment: any) {
-         return new Promise(resolve => {
-            this.http.put(this.apiUrl + '/Assignments', assignment)
-                .map(res => res.json())
-                .subscribe(data => {
-                    resolve(data);
-                });
-        });
-    }
-    addNewAssignment(assignment: any) {
-         return new Promise(resolve => {
-            this.http.post(this.apiUrl + '/Assignments', assignment)
+            this.http.post(this.apiUrl + '/StaffDirectories', staffDirectory)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
@@ -129,9 +69,9 @@ export class RestAPIService {
         });
     }
 
-    deleteAssignment(assignment: any) {
+    deleteStaffDirectory(staffDirectory: any) {
          return new Promise(resolve => {
-            this.http.delete(this.apiUrl + '/Assignments?assignmentId=' + assignment.AssignmentId)
+            this.http.delete(this.apiUrl + '/StaffDirectories?staffDirectoryId=' + staffDirectory.StaffDirectoryId)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
@@ -144,44 +84,44 @@ export class RestAPIService {
       
       
       
-    public courses: any[];
-    getCourses() {
+    public locations: any[];
+    getLocations() {
 
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Courses?expand=all')
+            this.http.get(this.apiUrl + '/Locations?expand=all')
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.courses = data;
-                    resolve(this.courses);
+                    this.locations = data;
+                    resolve(this.locations);
                 });
         });
     }
 
-    public course: any[];
-    getCourse(course: any) {
+    public location: any[];
+    getLocation(location: any) {
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Courses?expand=all&courseId=' + course.CourseId)
+            this.http.get(this.apiUrl + '/Locations?expand=all&locationId=' + location.LocationId)
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.course = data;
-                    resolve(this.course);
+                    this.location = data;
+                    resolve(this.location);
                 });
         });
     }
 
     
-    updateCourse(course: any) {
+    updateLocation(location: any) {
          return new Promise(resolve => {
-            this.http.put(this.apiUrl + '/Courses', course)
+            this.http.put(this.apiUrl + '/Locations', location)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
                 });
         });
     }
-    addNewCourse(course: any) {
+    addNewLocation(location: any) {
          return new Promise(resolve => {
-            this.http.post(this.apiUrl + '/Courses', course)
+            this.http.post(this.apiUrl + '/Locations', location)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
@@ -189,9 +129,369 @@ export class RestAPIService {
         });
     }
 
-    deleteCourse(course: any) {
+    deleteLocation(location: any) {
          return new Promise(resolve => {
-            this.http.delete(this.apiUrl + '/Courses?courseId=' + course.CourseId)
+            this.http.delete(this.apiUrl + '/Locations?locationId=' + location.LocationId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    
+      
+      
+      
+      
+      
+    public shots: any[];
+    getShots() {
+
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Shots?expand=all')
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.shots = data;
+                    resolve(this.shots);
+                });
+        });
+    }
+
+    public shot: any[];
+    getShot(shot: any) {
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Shots?expand=all&shotId=' + shot.ShotId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.shot = data;
+                    resolve(this.shot);
+                });
+        });
+    }
+
+    
+    updateShot(shot: any) {
+         return new Promise(resolve => {
+            this.http.put(this.apiUrl + '/Shots', shot)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    addNewShot(shot: any) {
+         return new Promise(resolve => {
+            this.http.post(this.apiUrl + '/Shots', shot)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+
+    deleteShot(shot: any) {
+         return new Promise(resolve => {
+            this.http.delete(this.apiUrl + '/Shots?shotId=' + shot.ShotId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    
+      
+      
+      
+      
+      
+    public videos: any[];
+    getVideos() {
+
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Videos?expand=all')
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.videos = data;
+                    resolve(this.videos);
+                });
+        });
+    }
+
+    public video: any[];
+    getVideo(video: any) {
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Videos?expand=all&videoId=' + video.VideoId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.video = data;
+                    resolve(this.video);
+                });
+        });
+    }
+
+    
+    updateVideo(video: any) {
+         return new Promise(resolve => {
+            this.http.put(this.apiUrl + '/Videos', video)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    addNewVideo(video: any) {
+         return new Promise(resolve => {
+            this.http.post(this.apiUrl + '/Videos', video)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+
+    deleteVideo(video: any) {
+         return new Promise(resolve => {
+            this.http.delete(this.apiUrl + '/Videos?videoId=' + video.VideoId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    
+      
+      
+      
+      
+      
+    public agencyContacts: any[];
+    getAgencyContacts() {
+
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/AgencyContacts?expand=all')
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.agencyContacts = data;
+                    resolve(this.agencyContacts);
+                });
+        });
+    }
+
+    public agencyContact: any[];
+    getAgencyContact(agencyContact: any) {
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/AgencyContacts?expand=all&agencyContactId=' + agencyContact.AgencyContactId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.agencyContact = data;
+                    resolve(this.agencyContact);
+                });
+        });
+    }
+
+    
+    updateAgencyContact(agencyContact: any) {
+         return new Promise(resolve => {
+            this.http.put(this.apiUrl + '/AgencyContacts', agencyContact)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    addNewAgencyContact(agencyContact: any) {
+         return new Promise(resolve => {
+            this.http.post(this.apiUrl + '/AgencyContacts', agencyContact)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+
+    deleteAgencyContact(agencyContact: any) {
+         return new Promise(resolve => {
+            this.http.delete(this.apiUrl + '/AgencyContacts?agencyContactId=' + agencyContact.AgencyContactId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    
+      
+      
+      
+      
+      
+    public scenes: any[];
+    getScenes() {
+
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Scenes?expand=all')
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.scenes = data;
+                    resolve(this.scenes);
+                });
+        });
+    }
+
+    public scene: any[];
+    getScene(scene: any) {
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Scenes?expand=all&sceneId=' + scene.SceneId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.scene = data;
+                    resolve(this.scene);
+                });
+        });
+    }
+
+    
+    updateScene(scene: any) {
+         return new Promise(resolve => {
+            this.http.put(this.apiUrl + '/Scenes', scene)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    addNewScene(scene: any) {
+         return new Promise(resolve => {
+            this.http.post(this.apiUrl + '/Scenes', scene)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+
+    deleteScene(scene: any) {
+         return new Promise(resolve => {
+            this.http.delete(this.apiUrl + '/Scenes?sceneId=' + scene.SceneId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    
+      
+      
+      
+      
+      
+    public inventoryItems: any[];
+    getInventoryItems() {
+
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/InventoryItems?expand=all')
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.inventoryItems = data;
+                    resolve(this.inventoryItems);
+                });
+        });
+    }
+
+    public inventoryItem: any[];
+    getInventoryItem(inventoryItem: any) {
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/InventoryItems?expand=all&inventoryItemId=' + inventoryItem.InventoryItemId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.inventoryItem = data;
+                    resolve(this.inventoryItem);
+                });
+        });
+    }
+
+    
+    updateInventoryItem(inventoryItem: any) {
+         return new Promise(resolve => {
+            this.http.put(this.apiUrl + '/InventoryItems', inventoryItem)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    addNewInventoryItem(inventoryItem: any) {
+         return new Promise(resolve => {
+            this.http.post(this.apiUrl + '/InventoryItems', inventoryItem)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+
+    deleteInventoryItem(inventoryItem: any) {
+         return new Promise(resolve => {
+            this.http.delete(this.apiUrl + '/InventoryItems?inventoryItemId=' + inventoryItem.InventoryItemId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    
+      
+      
+      
+      
+      
+    public agencies: any[];
+    getAgencies() {
+
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Agencies?expand=all')
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.agencies = data;
+                    resolve(this.agencies);
+                });
+        });
+    }
+
+    public agency: any[];
+    getAgency(agency: any) {
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Agencies?expand=all&agencyId=' + agency.AgencyId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.agency = data;
+                    resolve(this.agency);
+                });
+        });
+    }
+
+    
+    updateAgency(agency: any) {
+         return new Promise(resolve => {
+            this.http.put(this.apiUrl + '/Agencies', agency)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    addNewAgency(agency: any) {
+         return new Promise(resolve => {
+            this.http.post(this.apiUrl + '/Agencies', agency)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+
+    deleteAgency(agency: any) {
+         return new Promise(resolve => {
+            this.http.delete(this.apiUrl + '/Agencies?agencyId=' + agency.AgencyId)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);

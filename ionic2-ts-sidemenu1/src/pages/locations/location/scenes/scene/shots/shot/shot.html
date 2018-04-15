@@ -1,0 +1,198 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ shot.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - Shot</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header *ngIf="!editMode">
+                    
+                        <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input [readonly]="true" type="text" name="shotName" [(ngModel)]="shot.Name"></ion-input>
+                                
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>ShotSize</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="ShotSize" 
+                                                name="shotShotSizeName" 
+                                                [(ngModel)]="shot.ShotSize"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Angle</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Angle" 
+                                                name="shotAngleName" 
+                                                [(ngModel)]="shot.Angle"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>CameraMovement</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="CameraMovement" 
+                                                name="shotCameraMovementName" 
+                                                [(ngModel)]="shot.CameraMovement"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Lens</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Lens" 
+                                                name="shotLensName" 
+                                                [(ngModel)]="shot.Lens"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>ShootDate</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="ShootDate" 
+                                                name="shotShootDateName" 
+                                                [(ngModel)]="shot.ShootDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>ShotNum</ion-label>
+                                <ion-input type="number"
+                                                disabled="true" 
+                                                placeholder="ShotNum" 
+                                                name="shotShotNumName" 
+                                                [(ngModel)]="shot.ShotNum"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                disabled="true" 
+                                                placeholder="createdTime" 
+                                                name="shotcreatedTimeName" 
+                                                [(ngModel)]="shot.createdTime"></ion-input>
+                            </ion-item>
+                            
+
+                             <ion-row right="">
+                                <ion-col text-right="">   
+                                    <button ion-button="" (click)="editMode = true"><ion-icon name="create"></ion-icon> Edit</button>
+                                </ion-col> 
+                            </ion-row>
+                                            
+                </ion-card-header>
+                    
+                        <div *ngIf="editMode">
+                            <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input type="text" name="shotName" [(ngModel)]="shot.Name"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>ShotSize</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="ShotSize" 
+                                                name="shotShotSizeName" 
+                                                [(ngModel)]="shot.ShotSize"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Angle</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Angle" 
+                                                name="shotAngleName" 
+                                                [(ngModel)]="shot.Angle"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>CameraMovement</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="CameraMovement" 
+                                                name="shotCameraMovementName" 
+                                                [(ngModel)]="shot.CameraMovement"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Lens</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Lens" 
+                                                name="shotLensName" 
+                                                [(ngModel)]="shot.Lens"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>ShootDate</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="ShootDate" 
+                                                name="shotShootDateName" 
+                                                [(ngModel)]="shot.ShootDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>ShotNum</ion-label>
+                                <ion-input type="number"
+                                                placeholder="ShotNum" 
+                                                name="shotShotNumName" 
+                                                [(ngModel)]="shot.ShotNum"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                placeholder="createdTime" 
+                                                name="shotcreatedTimeName" 
+                                                [(ngModel)]="shot.createdTime"></ion-input>
+                            </ion-item>
+                            
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" (click)="updateShot(shot)">
+                                        <ion-icon name="checkmark" item-left=""></ion-icon> Ok
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" *ngIf="canDelete"  (click)="deleteShot()">
+                                        <ion-icon name="trash" item-left=""></ion-icon> Delete
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    
+
+                <p>
+                
+                More about {{ shot.Name }} can go here...
+                
+
+                
+                </p>
+
+                
+
+            
+    </ion-card>
+
+</ion-content>

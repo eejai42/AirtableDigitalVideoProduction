@@ -1,0 +1,180 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ inventoryitem.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - InventoryItem</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header *ngIf="!editMode">
+                    
+                        <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input [readonly]="true" type="text" name="inventoryitemName" [(ngModel)]="inventoryitem.Name"></ion-input>
+                                
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Type</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Type" 
+                                                name="inventoryitemTypeName" 
+                                                [(ngModel)]="inventoryitem.Type"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Source</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Source" 
+                                                name="inventoryitemSourceName" 
+                                                [(ngModel)]="inventoryitem.Source"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Status</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Status" 
+                                                name="inventoryitemStatusName" 
+                                                [(ngModel)]="inventoryitem.Status"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>NextShootDate</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="NextShootDate" 
+                                                name="inventoryitemNextShootDateName" 
+                                                [(ngModel)]="inventoryitem.NextShootDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                disabled="true" 
+                                                placeholder="createdTime" 
+                                                name="inventoryitemcreatedTimeName" 
+                                                [(ngModel)]="inventoryitem.createdTime"></ion-input>
+                            </ion-item>
+                            
+
+                             <ion-row right="">
+                                <ion-col text-right="">   
+                                    <button ion-button="" (click)="editMode = true"><ion-icon name="create"></ion-icon> Edit</button>
+                                </ion-col> 
+                            </ion-row>
+                                            
+                </ion-card-header>
+                    
+                        <div *ngIf="editMode">
+                            <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input type="text" name="inventoryitemName" [(ngModel)]="inventoryitem.Name"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Type</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Type" 
+                                                name="inventoryitemTypeName" 
+                                                [(ngModel)]="inventoryitem.Type"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Source</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Source" 
+                                                name="inventoryitemSourceName" 
+                                                [(ngModel)]="inventoryitem.Source"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Status</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Status" 
+                                                name="inventoryitemStatusName" 
+                                                [(ngModel)]="inventoryitem.Status"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>NextShootDate</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="NextShootDate" 
+                                                name="inventoryitemNextShootDateName" 
+                                                [(ngModel)]="inventoryitem.NextShootDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                placeholder="createdTime" 
+                                                name="inventoryitemcreatedTimeName" 
+                                                [(ngModel)]="inventoryitem.createdTime"></ion-input>
+                            </ion-item>
+                            
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" (click)="updateInventoryItem(inventoryitem)">
+                                        <ion-icon name="checkmark" item-left=""></ion-icon> Ok
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" *ngIf="canDelete"  (click)="deleteInventoryItem()">
+                                        <ion-icon name="trash" item-left=""></ion-icon> Delete
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    
+
+                <p>
+                
+                More about {{ inventoryitem.Name }} can go here...
+                
+
+                
+                </p>
+
+                
+                <ion-card-header>
+                    <hr />
+                </ion-card-header>
+                <ion-list>
+                    
+                        
+                        
+                        <button ion-item="" (click)="goToState(StaffDirectoriesState, inventoryitem)">
+                            <ion-icon name="list" item-left=""></ion-icon>
+                            StaffDirectories   
+                            
+                            <small style="font-size: 0.8em; color: gray;">({{ inventoryitem.StaffDirectories ? inventoryitem.StaffDirectories.length : 0 }})</small>
+                        </button>
+                    
+                </ion-list>
+        
+
+            
+    </ion-card>
+
+</ion-content>

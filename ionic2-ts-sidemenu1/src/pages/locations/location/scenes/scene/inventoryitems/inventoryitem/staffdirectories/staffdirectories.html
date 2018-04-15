@@ -1,0 +1,50 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ this.parent.inventoryItem.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - StaffDirectories</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     StaffDirectories
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!staffDirectories || staffDirectories.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No StaffDirectories yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="staffDirectories && staffDirectories.length > 0">
+                        <button ion-item="" (click)="goToState(StaffDirectoryState, staffDirectory)" *ngFor="let staffDirectory of staffDirectories">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ staffDirectory.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewStaffDirectory()">
+                        <ion-icon name="add" item-left=""></ion-icon> New StaffDirectory
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>

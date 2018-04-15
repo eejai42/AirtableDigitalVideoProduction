@@ -1,0 +1,50 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ this.parent.scene.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - InventoryItems</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     InventoryItems
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!inventoryItems || inventoryItems.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No InventoryItems yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="inventoryItems && inventoryItems.length > 0">
+                        <button ion-item="" (click)="goToState(InventoryItemState, inventoryItem)" *ngFor="let inventoryItem of inventoryItems">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ inventoryItem.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewInventoryItem()">
+                        <ion-icon name="add" item-left=""></ion-icon> New InventoryItem
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>

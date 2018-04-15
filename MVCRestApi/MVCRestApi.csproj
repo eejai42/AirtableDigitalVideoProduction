@@ -179,6 +179,38 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\api\AgenciesController.cs" />
+    <Compile Include="Controllers\api\AgenciesController.designer.cs">
+      <DependentUpon>AgenciesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\api\AgencyContactsController.cs" />
+    <Compile Include="Controllers\api\AgencyContactsController.designer.cs">
+      <DependentUpon>AgencyContactsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\api\InventoryItemsController.cs" />
+    <Compile Include="Controllers\api\InventoryItemsController.designer.cs">
+      <DependentUpon>InventoryItemsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\api\LocationsController.cs" />
+    <Compile Include="Controllers\api\LocationsController.designer.cs">
+      <DependentUpon>LocationsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\api\ScenesController.cs" />
+    <Compile Include="Controllers\api\ScenesController.designer.cs">
+      <DependentUpon>ScenesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\api\ShotsController.cs" />
+    <Compile Include="Controllers\api\ShotsController.designer.cs">
+      <DependentUpon>ShotsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\api\StaffDirectoriesController.cs" />
+    <Compile Include="Controllers\api\StaffDirectoriesController.designer.cs">
+      <DependentUpon>StaffDirectoriesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\api\VideosController.cs" />
+    <Compile Include="Controllers\api\VideosController.designer.cs">
+      <DependentUpon>VideosController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

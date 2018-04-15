@@ -1,0 +1,207 @@
+<html><head><title>AirtableDigitalVideoProduction - Single Page Doc s</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" /></head><body><h3>AirtableDigitalVideoProduction Raw Data model</h3><a class="btn btn-sm btn-primary" href="Index.html"><<&nbsp;Back Interactive Object Explorer</a><table style="width: 100%"><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="StaffDirectory"></a>
+                        <hr /><div style="float: right;">
+                        Parented by 
+                        
+                            
+                                <a href="#InventoryItem">InventoryItem</a>
+                        
+                        
+                        </div><h2>StaffDirectory</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each StaffDirectory may have zero or more associated
+                          
+                            
+                                <a href="#Video">
+                                
+                                    Videos
+                                    
+                                </a>
+                        
+                            
+                                , <a href="#Video">
+                                
+                                    Videos
+                                    
+                                </a>
+                        
+                            
+                                , <a href="#Video">
+                                
+                                    Videos
+                                    
+                                </a>
+                        
+                            
+                                , <a href="#Video">
+                                
+                                    Videos
+                                    
+                                </a>
+                        
+                            
+                                , <a href="#InventoryItem">
+                                
+                                    InventoryItems
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>StaffDirectoryId</td><td>TEXT</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>Title</td><td>TEXT</td><td></td></tr><tr><td>Team</td><td>TEXT</td><td></td></tr><tr><td>Email</td><td>TEXT</td><td></td></tr><tr><td>Office</td><td>TEXT</td><td></td></tr><tr><td>CellPhone</td><td>TEXT</td><td></td></tr><tr><td>PropsEquipmentinPossession</td><td>TEXT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="Location"></a>
+                        <hr /><h2>Location</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each Location may have zero or more associated
+                          
+                            
+                                <a href="#Scene">
+                                
+                                    Scenes
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>LocationId</td><td>TEXT</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>Address</td><td>TEXT</td><td></td></tr><tr><td>MainContact</td><td>TEXT</td><td></td></tr><tr><td>Hours</td><td>TEXT</td><td></td></tr><tr><td>CurrentStatus</td><td>TEXT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="Shot"></a>
+                        <hr /><div style="float: right;">
+                        Parented by 
+                        
+                            
+                                <a href="#Scene">Scene</a>
+                        
+                        
+                            
+                                , <a href="#Video">Video</a>
+                        
+                        
+                        </div><h2>Shot</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>ShotId</td><td>TEXT</td><td></td></tr><tr><td>Scene</td><td>TEXT</td><td></td></tr><tr><td>ShotSize</td><td>TEXT</td><td></td></tr><tr><td>Angle</td><td>TEXT</td><td></td></tr><tr><td>CameraMovement</td><td>TEXT</td><td></td></tr><tr><td>Lens</td><td>TEXT</td><td></td></tr><tr><td>ShootDate</td><td>xs:date</td><td></td></tr><tr><td>ShotNum</td><td>INT32</td><td></td></tr><tr><td>Name</td><td>xs:decimal</td><td></td></tr><tr><td>Video</td><td>TEXT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="Video"></a>
+                        <hr /><div style="float: right;">
+                        Parented by 
+                        
+                            
+                                <a href="#StaffDirectory">StaffDirectory</a>
+                        
+                        
+                            
+                                , <a href="#StaffDirectory">StaffDirectory</a>
+                        
+                        
+                            
+                                , <a href="#StaffDirectory">StaffDirectory</a>
+                        
+                        
+                            
+                                , <a href="#StaffDirectory">StaffDirectory</a>
+                        
+                        
+                            
+                                , <a href="#Agency">Agency</a>
+                        
+                        
+                        </div><h2>Video</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each Video may have zero or more associated
+                          
+                            
+                                <a href="#Shot">
+                                
+                                    Shots
+                                    
+                                </a>
+                        
+                            
+                                , <a href="#Scene">
+                                
+                                    Scenes
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>VideoId</td><td>TEXT</td><td></td></tr><tr><td>SlugName</td><td>TEXT</td><td></td></tr><tr><td>Writer</td><td>TEXT</td><td></td></tr><tr><td>Platform</td><td>TEXT</td><td></td></tr><tr><td>Format</td><td>TEXT</td><td></td></tr><tr><td>ReleaseDate</td><td>DATETIME</td><td></td></tr><tr><td>ProjectStatus</td><td>TEXT</td><td></td></tr><tr><td>Editor</td><td>TEXT</td><td></td></tr><tr><td>FactCheck</td><td>TEXT</td><td></td></tr><tr><td>ScriptURL</td><td>TEXT</td><td></td></tr><tr><td>HostVOArtist</td><td>TEXT</td><td></td></tr><tr><td>ScriptDeadline</td><td>xs:date</td><td></td></tr><tr><td>ShootDate</td><td>xs:date</td><td></td></tr><tr><td>ReviewCutLatest</td><td>TEXT</td><td></td></tr><tr><td>Signoff</td><td>TEXT</td><td></td></tr><tr><td>ShootPlan</td><td>TEXT</td><td></td></tr><tr><td>LIVEURL</td><td>TEXT</td><td></td></tr><tr><td>AssignedEditDate</td><td>xs:date</td><td></td></tr><tr><td>RightsClearancesStatus</td><td>TEXT</td><td></td></tr><tr><td>Series</td><td>TEXT</td><td></td></tr><tr><td>TargetLengthminutes</td><td>SHORT</td><td></td></tr><tr><td>Budget</td><td>SHORT</td><td></td></tr><tr><td>Spend</td><td>SHORT</td><td></td></tr><tr><td>Agency</td><td>TEXT</td><td></td></tr><tr><td>RemainingBudget</td><td>SHORT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="AgencyContact"></a>
+                        <hr /><div style="float: right;">
+                        Parented by 
+                        
+                            
+                                <a href="#Agency">Agency</a>
+                        
+                        
+                        </div><h2>AgencyContact</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>AgencyContactId</td><td>TEXT</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>Phone</td><td>TEXT</td><td></td></tr><tr><td>Email</td><td>TEXT</td><td></td></tr><tr><td>Team</td><td>TEXT</td><td></td></tr><tr><td>Agency</td><td>TEXT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="Scene"></a>
+                        <hr /><div style="float: right;">
+                        Parented by 
+                        
+                            
+                                <a href="#Video">Video</a>
+                        
+                        
+                            
+                                , <a href="#InventoryItem">InventoryItem</a>
+                        
+                        
+                            
+                                , <a href="#Location">Location</a>
+                        
+                        
+                        </div><h2>Scene</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each Scene may have zero or more associated
+                          
+                            
+                                <a href="#Shot">
+                                
+                                    Shots
+                                    
+                                </a>
+                        
+                            
+                                , <a href="#InventoryItem">
+                                
+                                    InventoryItems
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>SceneId</td><td>TEXT</td><td></td></tr><tr><td>SceneName</td><td>TEXT</td><td></td></tr><tr><td>Video</td><td>TEXT</td><td></td></tr><tr><td>Props</td><td>TEXT</td><td></td></tr><tr><td>Location</td><td>TEXT</td><td></td></tr><tr><td>Script</td><td>TEXT</td><td></td></tr><tr><td>SceneNum</td><td>INT32</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="InventoryItem"></a>
+                        <hr /><div style="float: right;">
+                        Parented by 
+                        
+                            
+                                <a href="#StaffDirectory">StaffDirectory</a>
+                        
+                        
+                            
+                                , <a href="#Scene">Scene</a>
+                        
+                        
+                        </div><h2>InventoryItem</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each InventoryItem may have zero or more associated
+                          
+                            
+                                <a href="#StaffDirectory">
+                                
+                                    StaffDirectories
+                                    
+                                </a>
+                        
+                            
+                                , <a href="#Scene">
+                                
+                                    Scenes
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>InventoryItemId</td><td>TEXT</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>Type</td><td>TEXT</td><td></td></tr><tr><td>Source</td><td>TEXT</td><td></td></tr><tr><td>Status</td><td>TEXT</td><td></td></tr><tr><td>Whocurrentlyhasit</td><td>TEXT</td><td></td></tr><tr><td>Scenes</td><td>TEXT</td><td></td></tr><tr><td>NextShootDate</td><td>xs:date</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="Agency"></a>
+                        <hr /><h2>Agency</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each Agency may have zero or more associated
+                          
+                            
+                                <a href="#Video">
+                                
+                                    Videos
+                                    
+                                </a>
+                        
+                            
+                                , <a href="#AgencyContact">
+                                
+                                    AgencyContacts
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>AgencyId</td><td>TEXT</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr></table></body></html>

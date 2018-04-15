@@ -1,0 +1,196 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ staffdirectory.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - StaffDirectory</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header *ngIf="!editMode">
+                    
+                        <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input [readonly]="true" type="text" name="staffdirectoryName" [(ngModel)]="staffdirectory.Name"></ion-input>
+                                
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Title</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Title" 
+                                                name="staffdirectoryTitleName" 
+                                                [(ngModel)]="staffdirectory.Title"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Team</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Team" 
+                                                name="staffdirectoryTeamName" 
+                                                [(ngModel)]="staffdirectory.Team"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Email</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Email" 
+                                                name="staffdirectoryEmailName" 
+                                                [(ngModel)]="staffdirectory.Email"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Office</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Office" 
+                                                name="staffdirectoryOfficeName" 
+                                                [(ngModel)]="staffdirectory.Office"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>CellPhone</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="CellPhone" 
+                                                name="staffdirectoryCellPhoneName" 
+                                                [(ngModel)]="staffdirectory.CellPhone"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                disabled="true" 
+                                                placeholder="createdTime" 
+                                                name="staffdirectorycreatedTimeName" 
+                                                [(ngModel)]="staffdirectory.createdTime"></ion-input>
+                            </ion-item>
+                            
+
+                             <ion-row right="">
+                                <ion-col text-right="">   
+                                    <button ion-button="" (click)="editMode = true"><ion-icon name="create"></ion-icon> Edit</button>
+                                </ion-col> 
+                            </ion-row>
+                                            
+                </ion-card-header>
+                    
+                        <div *ngIf="editMode">
+                            <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input type="text" name="staffdirectoryName" [(ngModel)]="staffdirectory.Name"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Title</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Title" 
+                                                name="staffdirectoryTitleName" 
+                                                [(ngModel)]="staffdirectory.Title"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Team</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Team" 
+                                                name="staffdirectoryTeamName" 
+                                                [(ngModel)]="staffdirectory.Team"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Email</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Email" 
+                                                name="staffdirectoryEmailName" 
+                                                [(ngModel)]="staffdirectory.Email"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Office</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Office" 
+                                                name="staffdirectoryOfficeName" 
+                                                [(ngModel)]="staffdirectory.Office"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>CellPhone</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="CellPhone" 
+                                                name="staffdirectoryCellPhoneName" 
+                                                [(ngModel)]="staffdirectory.CellPhone"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                placeholder="createdTime" 
+                                                name="staffdirectorycreatedTimeName" 
+                                                [(ngModel)]="staffdirectory.createdTime"></ion-input>
+                            </ion-item>
+                            
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" (click)="updateStaffDirectory(staffdirectory)">
+                                        <ion-icon name="checkmark" item-left=""></ion-icon> Ok
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" *ngIf="canDelete"  (click)="deleteStaffDirectory()">
+                                        <ion-icon name="trash" item-left=""></ion-icon> Delete
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    
+
+                <p>
+                
+                More about {{ staffdirectory.Name }} can go here...
+                
+
+                
+                </p>
+
+                
+                <ion-card-header>
+                    <hr />
+                </ion-card-header>
+                <ion-list>
+                    
+                        
+                        
+                        <button ion-item="" (click)="goToState(VideosState, staffdirectory)">
+                            <ion-icon name="list" item-left=""></ion-icon>
+                            Videos   
+                            
+                        </button>
+                    
+                </ion-list>
+        
+
+            
+    </ion-card>
+
+</ion-content>

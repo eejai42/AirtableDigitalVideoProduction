@@ -1,0 +1,180 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ location.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - Location</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header *ngIf="!editMode">
+                    
+                        <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input [readonly]="true" type="text" name="locationName" [(ngModel)]="location.Name"></ion-input>
+                                
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Address</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Address" 
+                                                name="locationAddressName" 
+                                                [(ngModel)]="location.Address"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>MainContact</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="MainContact" 
+                                                name="locationMainContactName" 
+                                                [(ngModel)]="location.MainContact"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Hours</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Hours" 
+                                                name="locationHoursName" 
+                                                [(ngModel)]="location.Hours"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>CurrentStatus</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="CurrentStatus" 
+                                                name="locationCurrentStatusName" 
+                                                [(ngModel)]="location.CurrentStatus"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                disabled="true" 
+                                                placeholder="createdTime" 
+                                                name="locationcreatedTimeName" 
+                                                [(ngModel)]="location.createdTime"></ion-input>
+                            </ion-item>
+                            
+
+                             <ion-row right="">
+                                <ion-col text-right="">   
+                                    <button ion-button="" (click)="editMode = true"><ion-icon name="create"></ion-icon> Edit</button>
+                                </ion-col> 
+                            </ion-row>
+                                            
+                </ion-card-header>
+                    
+                        <div *ngIf="editMode">
+                            <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input type="text" name="locationName" [(ngModel)]="location.Name"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Address</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Address" 
+                                                name="locationAddressName" 
+                                                [(ngModel)]="location.Address"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>MainContact</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="MainContact" 
+                                                name="locationMainContactName" 
+                                                [(ngModel)]="location.MainContact"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Hours</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Hours" 
+                                                name="locationHoursName" 
+                                                [(ngModel)]="location.Hours"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>CurrentStatus</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="CurrentStatus" 
+                                                name="locationCurrentStatusName" 
+                                                [(ngModel)]="location.CurrentStatus"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                placeholder="createdTime" 
+                                                name="locationcreatedTimeName" 
+                                                [(ngModel)]="location.createdTime"></ion-input>
+                            </ion-item>
+                            
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" (click)="updateLocation(location)">
+                                        <ion-icon name="checkmark" item-left=""></ion-icon> Ok
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" *ngIf="canDelete"  (click)="deleteLocation()">
+                                        <ion-icon name="trash" item-left=""></ion-icon> Delete
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    
+
+                <p>
+                
+                More about {{ location.Name }} can go here...
+                
+
+                
+                </p>
+
+                
+                <ion-card-header>
+                    <hr />
+                </ion-card-header>
+                <ion-list>
+                    
+                        
+                        
+                        <button ion-item="" (click)="goToState(ScenesState, location)">
+                            <ion-icon name="list" item-left=""></ion-icon>
+                            Scenes   
+                            
+                            <small style="font-size: 0.8em; color: gray;">({{ location.Scenes ? location.Scenes.length : 0 }})</small>
+                        </button>
+                    
+                </ion-list>
+        
+
+            
+    </ion-card>
+
+</ion-content>
